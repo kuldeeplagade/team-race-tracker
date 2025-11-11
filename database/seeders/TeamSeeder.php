@@ -15,6 +15,7 @@ class TeamSeeder extends Seeder
     {
         Team::create(['team_name' => 'Red Hawks']);
         Team::create(['team_name' => 'Blue Falcons']);
+        Team::create(['team_name' => 'Green Panthers']);
     }
 
 }

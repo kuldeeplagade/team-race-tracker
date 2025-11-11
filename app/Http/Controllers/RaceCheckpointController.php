@@ -14,7 +14,6 @@ class RaceCheckpointController extends Controller
             'checkpoint_name' => 'required|string|max:255',
         ]);
 
-        // Find the next order number for this race
         $nextOrder = $race->checkpoints()->max('order_no') + 1;
 
         $race->checkpoints()->create([
@@ -31,7 +30,7 @@ class RaceCheckpointController extends Controller
     {
         $checkpoint->delete();
 
-        // Optional: reorder remaining checkpoints
+        // Reorder remaining checkpoints
         $race->checkpoints()
             ->orderBy('order_no')
             ->get()

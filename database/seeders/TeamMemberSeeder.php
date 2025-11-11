@@ -16,6 +16,7 @@ class TeamMemberSeeder extends Seeder
     {
         $team1 = Team::where('team_name', 'Red Hawks')->first();
         $team2 = Team::where('team_name', 'Blue Falcons')->first();
+         $team3 = Team::where('team_name', 'Green Panthers')->first();
 
         $team1->members()->createMany([
             ['member_name' => 'John Miller'],
@@ -26,6 +27,11 @@ class TeamMemberSeeder extends Seeder
             ['member_name' => 'Amit Rao'],
             ['member_name' => 'Leena Patel'],
         ]);
+
+        $team3->members()->createMany([
+            ['member_name' => 'Ravi Kumar'],
+            ['member_name' => 'Priya Shah'],
+        ]); 
     }
 
 }

@@ -11,9 +11,14 @@ use App\Http\Controllers\RaceLogController;
 
 use App\Http\Controllers\RaceReportController;
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Redirect root (/) to teams page
 Route::get('/', function () {
-    return view('welcome');
-});
+    return redirect()->route('teams.index');
+})->name('dashboard');
 
 
 Route::middleware(['web'])->group(function() {

@@ -31,6 +31,17 @@ class RaceSeeder extends Seeder
             ['checkpoint_name' => 'Bridge', 'order_no' => 3],
             ['checkpoint_name' => 'End Point', 'order_no' => 4],
         ]);
+
+        // race 3
+        $r3 = Race::create(['race_name' => 'Desert Dash', 'description' => 'Sprint through desert checkpoints']);
+        $r3->checkpoints()->createMany([
+            ['checkpoint_name' => 'Start Line', 'order_no' => 1],
+            ['checkpoint_name' => 'Oasis', 'order_no' => 2],
+            ['checkpoint_name' => 'Sand Dunes', 'order_no' => 3],
+            ['checkpoint_name' => 'Finish Line', 'order_no' => 4],
+        ]);
+
+
     }
 
 }
